@@ -1,0 +1,72 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "mle_bench",
+    "slug": "mle-bench",
+    "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+    "group": "Coding",
+    "tags": [
+      "Agent"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/mle_bench",
+    "inspect_ai": "0.3.260",
+    "eval_version": "7-F",
+    "dependency": ""
+  },
+  "execution": {
+    "class": "sandbox-local",
+    "cost_class": "high",
+    "sandbox": [
+      "solver"
+    ],
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "mle_bench",
+      "samples": 1
+    },
+    {
+      "name": "mle_bench_full",
+      "samples": 75
+    },
+    {
+      "name": "mle_bench_lite",
+      "samples": 22
+    }
+  ],
+  "total_samples": 98,
+  "external_assets": [
+    {
+      "type": "git_clone",
+      "source": "https://github.com/openai/mle-bench.git",
+      "state": "pinned"
+    },
+    {
+      "type": "direct_url",
+      "source": "https://github.com/conda-forge/miniforge/releases/download/24.11.3-0/Miniforge3-Linux-x86_64.sh",
+      "state": "pinned"
+    },
+    {
+      "type": "direct_url",
+      "source": "https://github.com/git-lfs/git-lfs/releases/download/v3.6.1/git-lfs-linux-amd64-v3.6.1.tar.gz",
+      "state": "pinned"
+    },
+    {
+      "type": "git_dependency",
+      "source": "https://github.com/openai/mle-bench.git",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
